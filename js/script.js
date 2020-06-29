@@ -1,3 +1,4 @@
+
 window.onscroll = function(){
     if(document.documentElement.scrollTop >100){
         document.querySelector('.go-top-container').classList.add('show');
@@ -5,6 +6,8 @@ window.onscroll = function(){
         document.querySelector('.go-top-container').classList.remove('show');
     }
 }
+
+
 
 document.querySelector('.go-top-container').addEventListener('click', () =>{
     window.scrollTo({
