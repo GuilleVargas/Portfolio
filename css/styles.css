@@ -30,6 +30,64 @@ html {
   margin-top: 80px;
 }
 
+.go-top-container{
+  position: fixed;
+  bottom: -40px;
+  right: -40px;
+  width: 110px;
+  height: 6.6;
+  z-index: 12;
+}
+
+.go-top-button{
+  width: 0rem;
+  height: 0rem;
+  background: #2071b2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+}
+
+.go-top-button i{
+  position: absolute;
+  font-size: 1.7rem;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50% )scale(0);
+  color: #fff;
+  transition: .2s;
+}
+
+.show .go-top-button{
+  animation: popup .3s ease-in-out;
+  width: 6.6rem;
+  height: 6.6rem;
+  z-index: 11;
+}
+
+.show i{
+  transform: translate(-50%, -50% )scale(1);
+}
+
+@keyframes popup{
+  0%{
+    width: 0rem;
+    height: 0rem;
+  }
+ 50%{
+  width: 8rem;
+  height: 8rem;
+ }
+ 100%{
+  width: 6.6rem;
+  height: 6.6rem;
+ }
+}
+
 #titleport {
   text-align: center;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
