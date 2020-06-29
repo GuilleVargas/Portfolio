@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 
 <body>
 
     <div class="header">
-
+        <button class="btn-home"><i  class="fa fa-bar-chart"></i></button>
         <!--Inicio-->
         <div class="header_structure">
             <h1 id="titleport" class="animate__animated animate__bounce"><strong>¡Bienvenido a mi Portfolio! </strong></h1>
@@ -98,11 +97,23 @@
 
     <div class="allskills" id="allskills">
     <div class="titleskills" ><strong>Habilidades</strong></div>
-    
-    <div class="skillss">
-        <canvas id="myCanvas"></canvas>
-        <legend for="myCanvas"></legend>
-        <canvas id="tip" ></canvas>
+    <div class="barras">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><p class="bars"><strong>Trabajo en equipo</strong></p> </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><p class="bars"><strong>Creativo</strong></p></div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 98%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><p class="bars"><strong>Sociable</strong></p></div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><p class="bars"><strong>Autodidacta</strong></p></div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><p class="bars"><strong>Flexible</strong></p></div>
+          </div>
+          
     </div>
     </div>
 
