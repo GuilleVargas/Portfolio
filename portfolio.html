@@ -5,41 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css" type="text/css" rel="stylesheet">
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 </head>
 
 <body>
 
     <div class="header">
-        <p class="titleport"> <strong>¡Portfolio de Guille </strong></p>
-        <img class="mecircle"  src="img/mecircle.png"/>
-        <button type="button" class="btn btn-outline-warning"> ¡Bienvenido!</button>
-    </div>
 
-    <div class="titleskills"><strong>Habilidades</strong></div>
-
-    <div class="allskills">
-    <div class="skills">
-        <ul>
-            <li><p class="trab">Trabajo en equipo</p><img class="color"  src="img/rojo.png"/></li>
-            <li><p class="aut">Autodidacta</p><img class="color"  src="img/amarillo.png"/></li>
-            <li><p class="crea">Creativo</p><img class="color"  src="img/verde.png"/></li>
-            <li><p class="org">Organizado</p><img class="color"  src="img/azul.png"/></li>
-        </ul>
-        <div class="grafico">
-            <div class="sombra"></div>
-            <div id="porcion1" class="recorte"><div class="quesito" data-rel="70"></div></div>
-            <div id="porcion2" class="recorte"><div class="quesito" data-rel="120"></div></div>
-            <div id="porcion3" class="recorte"><div class="quesito" data-rel="40"></div></div>
-            <div id="porcionFin" class="recorte"><div class="quesito" data-rel="145"></div></div>
+        <!--Inicio-->
+        <div class="header_structure">
+            <h1 id="titleport" class="animate__animated animate__bounce"><strong>¡Bienvenido a mi Portfolio! </strong></h1>
             
-       </div>
+          
+            <lottie-player class="gifi" src="https://assets2.lottiefiles.com/private_files/lf30_ZOuB83.json"  background="transparent"  speed="1"  style="width: 600px; height: 400px;"  loop autoplay></lottie-player>
+ 
+                <a href="#allinfo"> <button type="button" id="btnwelc"
+                    class="btn btn-outline-warning">¡Conóceme!</button></a>
+                    
+        </div>
+
+        <!--Menú desplegable-->
+        <nav class="menu">
+            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+            <label class="menu-open-button" for="menu-open">
+                <span class="hamburger hamburger-1"></span>
+                <span class="hamburger hamburger-2"></span>
+                <span class="hamburger hamburger-3"></span>
+            </label>
+
+            <a href="#allskills" class="menu-item"> <i  class="fa fa-bar-chart"></i> </a>
+            <a href="#technologies" class="menu-item"> <i class="fa fa-cogs"></i> </a>
+            <a href="#alleducation" class="menu-item"> <i class="fa fa-graduation-cap"></i> </a>
+            <a href="#allexp" class="menu-item"> <i class="fa fa-briefcase"></i> </a>
+        </nav>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="shadowed-goo">
+
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                        result="goo" />
+                    <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                    <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2"
+                        result="shadow" />
+                    <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                    <feComposite in2="shadow" in="goo" result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                        result="goo" />
+                    <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                </filter>
+            </defs>
+        </svg>
+        
+
     </div>
 
-    <div class="titletechnologies"><strong>Tecnologías</strong></div>
+    <!--Información-->
 
-    <div class="technologies">
+
+    <div class="allinfo" id="allinfo">
+        <div class="titleinfo"><strong>Acerca de...</strong></div>
+        <h2 id="infoname">Guillermo Vargas Torres</h2>
+        <p id="infoname1">Frontend Developer</p>
+
+        <div class="info">
+            <p id="infotext">"Amante del desarrollo de aplicaciones y nuevas
+                tecnologías, resolutivo comprometido y
+                proactivo. Con una capacidad  de aprendizaje
+                rápida y adaptabilidad a cualquier entorno."</p>
+            
+            <div class="imges">
+               <p> <i id="ic" class="fa fa-envelope"></i>  guillevargas10@gmail.com</p>
+               <p> <i id="ic" class="fa fa-phone"></i> +34 689651498</p>
+               <p> <i id="ic" class="fa fa-home"></i>  C/ Espronceda 14, MADRID, Madrid</p>
+               <p> <i id="ic" class="fa fa-github"></i>  github.com/GuilleVargas</p>
+               <p> <i id="ic" class="fa fa-skype"></i>  guillevargas10_2</p>
+               <p> <i id="ic" class="fa fa-linkedin"></i> linkedin.com/in/guillevargas</p>
+                </div>
+                
+            <img class="mecircle" src="img/mecircle.png" />
+        </div>
+        
+    </div>
+
+    <div class="allskills" id="allskills">
+    <div class="titleskills" ><strong>Habilidades</strong></div>
+    
+    <div class="skillss">
+        <canvas id="myCanvas"></canvas>
+        <legend for="myCanvas"></legend>
+        <canvas id="tip" ></canvas>
+    </div>
+    </div>
+
+
+
+    <div class="technologies" id="technologies">
+        <div class="titletechnologies"><strong>Tecnologías</strong></div>
         <div class="list1">
             <ul class="list-group">
                 <li class="list-group-item active">Programación Web Front-end</li>
@@ -47,29 +117,23 @@
                 <li class="list-group-item">SASS</li>
                 <li class="list-group-item">JavaScript</li>
                 <li class="list-group-item">XML</li>
-              </ul>
+            </ul>
         </div>
-        <div class="list2">
-            <ul class="list-group">
-                <li class="list-group-item active">Programación Web Back-end</li>
-                <li class="list-group-item">PHP</li>
-              </ul>
-        </div>
-        
+
         <div class="list7">
             <ul class="list-group">
                 <li class="list-group-item active">Stack</li>
                 <li class="list-group-item">Stack MEAN</li>
-              </ul>
+            </ul>
         </div>
-         <div class="list5">
+        <div class="list5">
             <ul class="list-group">
                 <li class="list-group-item active">IDEs</li>
                 <li class="list-group-item">Eclipse</li>
                 <li class="list-group-item">Visual Studio</li>
                 <li class="list-group-item">Android Studio</li>
                 <li class="list-group-item">NetBeans</li>
-              </ul>
+            </ul>
         </div>
         <div class="list4">
             <ul class="list-group">
@@ -77,47 +141,105 @@
                 <li class="list-group-item">MySQL</li>
                 <li class="list-group-item">PHPMyAdmin</li>
                 <li class="list-group-item">SQLite</li>
-              </ul>
+            </ul>
         </div>
-       
+
         <div class="list6">
             <ul class="list-group">
                 <li class="list-group-item active">Herramientas de desarrollo</li>
                 <li class="list-group-item">Visual Studio Code</li>
                 <li class="list-group-item">Git</li>
                 <li class="list-group-item">Insomnia</li>
-              </ul>
+            </ul>
         </div>
         <div class="list3">
             <ul class="list-group">
                 <li class="list-group-item active">Lenguajes de Programación</li>
                 <li class="list-group-item">Java</li>
                 <li class="list-group-item">Python</li>
-                <li class="list-group-item">C</li>
-              </ul>
+                <li class="list-group-item">PHP</li>
+            </ul>
         </div>
 
     </div>
 
+    </div>
+    
+    <div class="education" id="alleducation">
+        <div class="titleducation" ><strong>Educación</strong></div>
 
+        <div class="cardi">
+            <div class="card1">
+                <h2><strong>Técnico Especialista en Desarrollo de
+                    Aplicaciones Multiplataforma</strong></h2>
+                    <h6>STAFF CONSULTING</h6>
+                        <p>09/2018 - 06/2020</p>
+            </div>
+            <div class="card2">
+                <h2><strong>Grado Ingeniería <br> Informática</strong></h2>
+                    <h6>Universidad de Cádiz</h6>
+                    <p>09/2013 - Actualidad</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="expe" id="allexp">
+        <div class="titlexpe" ><strong>Experiencia Profesional</strong></div>
+    
+
+        <div class="cardi">
+            <div class="card1">
+                <h2><strong>Prácticas como Frontend Developer</strong></h2>
+                    <h6>Técnica 24</h6>
+                        <p>04/2020 - 07/2020</p>
+                        <ul>
+                            <li>Desarrollo del Front con Angular</li>
+                            <li>Creación de la API con NodeJS (Express)</li>
+                            <li>Implementación de la Base de Datos con MongoDB</li>
+                            <li>Utilización de Git como herramienta de desarrollo</li>
+                        </ul>
+            </div>
+            <div class="card3">
+                <h2><strong>Frontend Developer</strong></h2>
+                    <h6>Èlite</h6>
+                    <p>05/2019 - 8/2019</p>
+                    <ul>
+                        <li>Validación de formularios con JavaScript</li>
+                        <li>Creación de la interfaz en Angular</li>
+                        <li>Utilización de Git como herramienta de desarrollo</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="course">
+<div class="titlecourse" id="courses"><strong>Cursos y Seminarios</strong></div><br><br><br><br><br>
+        <div class="courseorg">
+        <ol id="lista5">
+            <li>Desarrollo de Apps Móviles - GOOGLE ACTÍVATE</li>
+            <li>Ejecución de proyectos de implantación de infraestructura de redes
+                telemáticas - EUROINNOVA FORMACIÓN</li>
+            <li>Experto en gestión de la seguridad en redes de área local.
+                Administración/Administrador de sistemas, redes y comunicaciones
+                LAN/WAN. - INESEM BUSINESS SCHOOL</li>
+        </ol>
 </div>
-<div class="titlecourse"><strong>Cursos y Seminarios</strong></div>
-
- <div class="course">
-
-    <ol id="lista5">
-        <li>Desarrollo de Apps Móviles - GOOGLE ACTÍVATE</li>
-        <li>Ejecución de proyectos de implantación de infraestructura de redes
-            telemáticas - EUROINNOVA FORMACIÓN</li>
-        <li>Experto en gestión de la seguridad en redes de área local.
-            Administración/Administrador de sistemas, redes y comunicaciones
-            LAN/WAN. - INESEM BUSINESS SCHOOL</li>
-    </ol>
-
- </div>
+    </div>
 
 
- <script src="main.js"></script>
+    <div class="footer">
+        <p class="foot"> <i id="ic" class="fa fa-copyright"></i>  Guillermo Vargas</p>
+    </div>
+    
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+ <script src="js/chartStyles.js"></script>
+
+ <script src="js/script.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+   
 </body>
 
 </html>
